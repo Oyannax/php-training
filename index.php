@@ -161,7 +161,24 @@
             <h2 class="exercice-ttl">Question 7</h2>
             <p class="exercice-txt">En réutilisant les scores de la question précédente, afficher le nom du joueur ayant obtenu le plus grand score.</p>
             <div class="exercice-sandbox">
-                
+            <?php
+                $maxScore = max($scorePlayer1, $scorePlayer2, $scorePlayer3, $scorePlayer4, $scorePlayer5);
+                if ($maxScore === $scorePlayer1) {
+                    echo "<p>$namePlayer1</p>";
+                }
+                if ($maxScore === $scorePlayer2) {
+                    echo "<p>$namePlayer2</p>";
+                }
+                if ($maxScore === $scorePlayer3) {
+                    echo "<p>$namePlayer3</p>";
+                }
+                if ($maxScore === $scorePlayer4) {
+                    echo "<p>$namePlayer4</p>";
+                }
+                if ($maxScore === $scorePlayer5) {
+                    echo "<p>$namePlayer5</p>";
+                }
+            ?>
             </div>
         </section>
 
