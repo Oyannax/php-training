@@ -271,7 +271,7 @@
                     $youngestAge = $players[4]["age"];
                 }
 
-                echo "<p>$youngestName, âgé de $youngestAge ans, est le joueur le plus jeune.</p>";
+                echo "<p>$youngestName, âgé de $youngestAge ans, est le plus jeune joueur.</p>";
             ?>
             </div>
         </section>
