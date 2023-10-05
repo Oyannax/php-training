@@ -123,6 +123,22 @@
                 $scorePlayer4 = 134;
                 $namePlayer5 = "Kevin";
                 $scorePlayer5 = 103;
+
+                if ($scorePlayer1 >= 50 && $scorePlayer1 <= 150) {
+                    echo "<p>$namePlayer1</p>";
+                }
+                if ($scorePlayer2 >= 50 && $scorePlayer2 <= 150) {
+                    echo "<p>$namePlayer2</p>";
+                }
+                if ($scorePlayer3 >= 50 && $scorePlayer3 <= 150) {
+                    echo "<p>$namePlayer3</p>";
+                }
+                if ($scorePlayer4 >= 50 && $scorePlayer4 <= 150) {
+                    echo "<p>$namePlayer4</p>";
+                }
+                if ($scorePlayer5 >= 50 && $scorePlayer5 <= 150) {
+                    echo "<p>$namePlayer5</p>";
+                }
             ?>
             </div>
         </section>
