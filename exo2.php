@@ -60,7 +60,13 @@ $fruits = ["fraise", "banane", "pomme", "cerise", "abricot", "pêche", "ananas",
             <h2 class="exercice-ttl">Question 3</h2>
             <p class="exercice-txt">Afficher les fruits dans une liste HTML non ordonnée avec pour chacun d'eux sa position dans la liste</p>
             <div class="exercice-sandbox">
-                
+                <ul>
+                <?php
+                    for ($i = 0; $i <= sizeof($fruits) - 1; $i++) {
+                        echo "<li>$i : $fruits[$i]</li>";
+                    }
+                ?>
+                </ul>
             </div>
         </section>
 
