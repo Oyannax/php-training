@@ -72,6 +72,10 @@
                 $quantityProduct1 = 1;
                 $quantityProduct2 = 10;
                 $quantityProduct3 = 4;
+
+                $totalOrder = $priceProduct1 * $quantityProduct1 + $priceProduct2 * $quantityProduct2 + $priceProduct3 * $quantityProduct3;
+                $totalOrder -= 10 * $totalOrder / 100;
+                echo "<p>$totalOrder</p>";
             ?>
             </div>
         </section>
