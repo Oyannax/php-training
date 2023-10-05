@@ -103,7 +103,19 @@
             <h2 class="exercice-ttl">Question 5</h2>
             <p class="exercice-txt">Affichez dans une liste HTML le nom des produits de la question 2 qui sont présents dans la phrase : "<?= $text1 ?>"</p>
             <div class="exercice-sandbox">
-                
+            <?php
+                echo "<ul>";
+                if (str_contains($text1, $nameProduct1)) {
+                    echo "<li>$nameProduct1</li>";
+                }
+                if (str_contains($text1, $nameProduct2)) {
+                    echo "<li>$nameProduct2</li>";
+                }
+                if (str_contains($text1, $nameProduct3)) {
+                    echo "<li>$nameProduct3</li>";
+                }
+                echo "</ul>";
+            ?>
             </div>
         </section>
 
