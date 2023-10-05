@@ -46,20 +46,20 @@
             <h2 class="exercice-ttl">Question 2</h2>
             <p class="exercice-txt">Afficher dans une liste HTML le nom des produits suivants et leurs prix.</p>
             <div class="exercice-sandbox">
-            <?php
-                $nameProduct1 = "arc";
-                $priceProduct1 = 10.30;
-                $nameProduct2 = "flèche";
-                $priceProduct2 = 2.90;
-                $nameProduct3 = "potion";
-                $priceProduct3 = 5.20;
+                <ul>
+                <?php
+                    $nameProduct1 = "arc";
+                    $priceProduct1 = 10.30;
+                    $nameProduct2 = "flèche";
+                    $priceProduct2 = 2.90;
+                    $nameProduct3 = "potion";
+                    $priceProduct3 = 5.20;
 
-                echo "<ul>
-                <li>$nameProduct1 : $priceProduct1</li>
-                <li>$nameProduct2 : $priceProduct2</li>
-                <li>$nameProduct3 : $priceProduct3</li>
-                </ul>";
-            ?>
+                    echo "<li>$nameProduct1 : $priceProduct1</li>";
+                    echo "<li>$nameProduct2 : $priceProduct2</li>";
+                    echo "<li>$nameProduct3 : $priceProduct3</li>";
+                ?>
+                </ul>
             </div>
         </section>
 
@@ -75,7 +75,8 @@
 
                 $totalOrder = $priceProduct1 * $quantityProduct1 + $priceProduct2 * $quantityProduct2 + $priceProduct3 * $quantityProduct3;
                 $totalOrder -= 10 * $totalOrder / 100;
-                echo "<p>$totalOrder</p>";
+
+                echo $totalOrder;
             ?>
             </div>
         </section>
@@ -88,7 +89,8 @@
             <div class="exercice-sandbox">
             <?php
                 $priciestItem = max($priceProduct1, $priceProduct2, $priceProduct3);
-                echo "<p>$priciestItem</p>";
+
+                echo $priciestItem;
             ?>
             </div>
         </section>
@@ -103,19 +105,19 @@
             <h2 class="exercice-ttl">Question 5</h2>
             <p class="exercice-txt">Affichez dans une liste HTML le nom des produits de la question 2 qui sont présents dans la phrase : "<?= $text1 ?>"</p>
             <div class="exercice-sandbox">
-            <?php
-                echo "<ul>";
-                if (str_contains($text1, $nameProduct1)) {
-                    echo "<li>$nameProduct1</li>";
-                }
-                if (str_contains($text1, $nameProduct2)) {
-                    echo "<li>$nameProduct2</li>";
-                }
-                if (str_contains($text1, $nameProduct3)) {
-                    echo "<li>$nameProduct3</li>";
-                }
-                echo "</ul>";
-            ?>
+                <ul>
+                <?php
+                    if (str_contains($text1, $nameProduct1)) {
+                        echo "<li>$nameProduct1</li>";
+                    }
+                    if (str_contains($text1, $nameProduct2)) {
+                        echo "<li>$nameProduct2</li>";
+                    }
+                    if (str_contains($text1, $nameProduct3)) {
+                        echo "<li>$nameProduct3</li>";
+                    }
+                ?>
+                </ul>
             </div>
         </section>
 
@@ -163,20 +165,21 @@
             <div class="exercice-sandbox">
             <?php
                 $maxScore = max($scorePlayer1, $scorePlayer2, $scorePlayer3, $scorePlayer4, $scorePlayer5);
+
                 if ($maxScore === $scorePlayer1) {
-                    echo "<p>$namePlayer1</p>";
+                    echo $namePlayer1;
                 }
                 if ($maxScore === $scorePlayer2) {
-                    echo "<p>$namePlayer2</p>";
+                    echo $namePlayer2;
                 }
                 if ($maxScore === $scorePlayer3) {
-                    echo "<p>$namePlayer3</p>";
+                    echo $namePlayer3;
                 }
                 if ($maxScore === $scorePlayer4) {
-                    echo "<p>$namePlayer4</p>";
+                    echo $namePlayer4;
                 }
                 if ($maxScore === $scorePlayer5) {
-                    echo "<p>$namePlayer5</p>";
+                    echo $namePlayer5;
                 }
             ?>
             </div>
@@ -190,6 +193,7 @@
             <div class="exercice-sandbox">
             <?php
                 $longestName = $namePlayer1;
+
                 if (strlen($namePlayer2) > strlen($longestName)) {
                     $longestName = $namePlayer2;
                 }
@@ -202,7 +206,8 @@
                 if (strlen($namePlayer5) > strlen($longestName)) {
                     $longestName = $namePlayer5;
                 }
-                echo "<p>$longestName</p>";
+
+                echo $longestName;
             ?>
             </div>
         </section>
@@ -220,7 +225,23 @@
             </ul>
             <p class="exercice-txt">Afficher la valeur de cette variable avec tous les détails.</p>
             <div class="exercice-sandbox">
-                
+            <?php
+                $agePlayer1 = 25;
+                $agePlayer2 = 34;
+                $agePlayer3 = 27;
+                $agePlayer4 = 47;
+                $agePlayer5 = 31;
+
+                $players = [
+                    ["name" => $namePlayer1, "score" => $scorePlayer1, "age" => $agePlayer1],
+                    ["name" => $namePlayer2, "score" => $scorePlayer2, "age" => $agePlayer2],
+                    ["name" => $namePlayer3, "score" => $scorePlayer3, "age" => $agePlayer3],
+                    ["name" => $namePlayer4, "score" => $scorePlayer4, "age" => $agePlayer4],
+                    ["name" => $namePlayer5, "score" => $scorePlayer5, "age" => $agePlayer5]
+                ];
+
+                var_dump($players);
+            ?>
             </div>
         </section>
 
