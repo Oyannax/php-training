@@ -53,6 +53,12 @@
                 $priceProduct2 = 2.90;
                 $nameProduct3 = "potion";
                 $priceProduct3 = 5.20;
+
+                echo "<ul>
+                <li>$nameProduct1 : $priceProduct1</li>
+                <li>$nameProduct2 : $priceProduct2</li>
+                <li>$nameProduct3 : $priceProduct3</li>
+                </ul>";
             ?>
             </div>
         </section>
