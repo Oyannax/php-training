@@ -126,34 +126,36 @@
             <h2 class="exercice-ttl">Question 6</h2>
             <p class="exercice-txt">Parmis les scores suivants, affichez le prénom des joueurs qui ont obtenus entre 50 et 150 points.</p>
             <div class="exercice-sandbox">
-            <?php
-                $namePlayer1 = "Tim";
-                $scorePlayer1 = 67;
-                $namePlayer2 = "Morgan";
-                $scorePlayer2 = 198;
-                $namePlayer3 = "Hamed";
-                $scorePlayer3 = 21;
-                $namePlayer4 = "Camille";
-                $scorePlayer4 = 134;
-                $namePlayer5 = "Kevin";
-                $scorePlayer5 = 103;
+                <ul>
+                <?php
+                    $namePlayer1 = "Tim";
+                    $scorePlayer1 = 67;
+                    $namePlayer2 = "Morgan";
+                    $scorePlayer2 = 198;
+                    $namePlayer3 = "Hamed";
+                    $scorePlayer3 = 21;
+                    $namePlayer4 = "Camille";
+                    $scorePlayer4 = 134;
+                    $namePlayer5 = "Kevin";
+                    $scorePlayer5 = 103;
 
-                if ($scorePlayer1 >= 50 && $scorePlayer1 <= 150) {
-                    echo "<p>$namePlayer1</p>";
-                }
-                if ($scorePlayer2 >= 50 && $scorePlayer2 <= 150) {
-                    echo "<p>$namePlayer2</p>";
-                }
-                if ($scorePlayer3 >= 50 && $scorePlayer3 <= 150) {
-                    echo "<p>$namePlayer3</p>";
-                }
-                if ($scorePlayer4 >= 50 && $scorePlayer4 <= 150) {
-                    echo "<p>$namePlayer4</p>";
-                }
-                if ($scorePlayer5 >= 50 && $scorePlayer5 <= 150) {
-                    echo "<p>$namePlayer5</p>";
-                }
-            ?>
+                    if ($scorePlayer1 >= 50 && $scorePlayer1 <= 150) {
+                        echo "<li>$namePlayer1</li>";
+                    }
+                    if ($scorePlayer2 >= 50 && $scorePlayer2 <= 150) {
+                        echo "<li>$namePlayer2</li>";
+                    }
+                    if ($scorePlayer3 >= 50 && $scorePlayer3 <= 150) {
+                        echo "<li>$namePlayer3</li>";
+                    }
+                    if ($scorePlayer4 >= 50 && $scorePlayer4 <= 150) {
+                        echo "<li>$namePlayer4</li>";
+                    }
+                    if ($scorePlayer5 >= 50 && $scorePlayer5 <= 150) {
+                        echo "<li>$namePlayer5</li>";
+                    }
+                ?>
+                </ul>
             </div>
         </section>
 
