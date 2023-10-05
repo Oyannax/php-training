@@ -92,7 +92,9 @@ $fruits = ["fraise", "banane", "pomme", "cerise", "abricot", "pêche", "ananas",
             <h2 class="exercice-ttl">Question 5</h2>
             <p class="exercice-txt">Afficher un fruit aléatoire du tableau</p>
             <div class="exercice-sandbox">
-                
+            <?php
+                echo $fruits[rand(0, sizeof($fruits) - 1)];
+            ?>
             </div>
         </section>
 
