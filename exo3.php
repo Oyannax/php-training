@@ -145,7 +145,12 @@ $prices = [3, 2, 2, 5, 8];
             <h2 class="exercice-ttl">Question 8</h2>
             <p class="exercice-txt">Ajouter au tableau $store le fruit "kiwi" pour un prix de 1,50 € puis afficher le tableau complet</p>
             <div class="exercice-sandbox">
+            <?php
+                $newArticle = ["kiwi" => 1.5];
+                $store += $newArticle;
                 
+                var_dump($store);
+            ?>
             </div>
         </section>
 
