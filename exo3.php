@@ -111,7 +111,21 @@ $prices = [3, 2, 2, 5, 8];
             <h2 class="exercice-ttl">Question 6</h2>
             <p class="exercice-txt">Composer un panier de fruits ne dépassant pas 12 euros, en sélectionnant chaque fruit dans l'ordre actuel.</p>
             <div class="exercice-sandbox">
-                
+            <?php
+                $total = 0;
+                $basket = [];
+
+                foreach ($store as $fruit => $price) {
+                    $total += $price;
+                    if ($total > 12) {
+                        $total -= $price;
+                        break;
+                    }
+                    array_push($basket, $fruit);
+                }
+
+                var_dump($basket, $total);
+            ?>
             </div>
         </section>
 
