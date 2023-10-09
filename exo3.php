@@ -77,7 +77,15 @@ $prices = [3, 2, 2, 5, 8];
             <h2 class="exercice-ttl">Question 4</h2>
             <p class="exercice-txt">Afficher dans une liste HTML le nom des fruits ayant un prix inférieur à 4 euros</p>
             <div class="exercice-sandbox">
-                
+                <ul>
+                <?php
+                    foreach ($store as $fruit => $price) {
+                        if ($price < 4) {
+                            echo "<li>$fruit</li>";
+                        }
+                    }
+                ?>
+                </ul>
             </div>
         </section>
 
