@@ -103,7 +103,14 @@ $fruits = ["fraise", "banane", "pomme", "cerise", "abricot", "pêche", "ananas",
             <h2 class="exercice-ttl">Question 6</h2>
             <p class="exercice-txt">Afficher les fruits dans un ordre aléatoire</p>
             <div class="exercice-sandbox">
-                
+                <ul>
+                <?php
+                    shuffle($fruits);
+                    foreach ($fruits as $fruit) {
+                        echo "<li>$fruit</li>";
+                    }
+                ?>
+                </ul>
             </div>
         </section>
 
@@ -112,7 +119,11 @@ $fruits = ["fraise", "banane", "pomme", "cerise", "abricot", "pêche", "ananas",
             <h2 class="exercice-ttl">Question 7</h2>
             <p class="exercice-txt">Afficher les fruits dont la chaîne de caractère est composée de 5 caractères au maximum</p>
             <div class="exercice-sandbox">
+                <ul>
+                <?php
                 
+                ?>
+                </ul>
             </div>
         </section>
 
