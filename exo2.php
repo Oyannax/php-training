@@ -141,10 +141,10 @@ $fruits = ["fraise", "banane", "pomme", "cerise", "abricot", "pêche", "ananas",
             <p class="exercice-txt">Remplacez pomme par pêche et banane par mangue et affichez-la.</p>
             <div class="exercice-sandbox">
             <?php
-                $fruits = ["pomme", "banane"];
+                $fruits2 = ["pomme", "banane"];
                 $newFruits = ["pêche", "mangue"];
-                $newBreakfast = str_replace($fruits, $newFruits, $breakfast);
-                
+                $newBreakfast = str_replace($fruits2, $newFruits, $breakfast);
+
                 echo "$newBreakfast";
             ?>
             </div>
@@ -155,7 +155,9 @@ $fruits = ["fraise", "banane", "pomme", "cerise", "abricot", "pêche", "ananas",
             <h2 class="exercice-ttl">Question 9</h2>
             <p class="exercice-txt">Affichez la chaîne de caractère composée de l'ensemble des fruits de la liste, séparés par une virgule et un espace.</p>
             <div class="exercice-sandbox">
-                
+            <?php
+                echo implode(", ", $fruits);
+            ?>
             </div>
         </section>
 
