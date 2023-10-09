@@ -94,7 +94,15 @@ $prices = [3, 2, 2, 5, 8];
             <h2 class="exercice-ttl">Question 5</h2>
             <p class="exercice-txt">Afficher dans une liste HTML le nom des fruits ayant un prix pair</p>
             <div class="exercice-sandbox">
-                
+                <ul>
+                <?php
+                    foreach ($store as $fruit => $price) {
+                        if ($price % 2 === 0) {
+                            echo "<li>$fruit</li>";
+                        }
+                    }
+                ?>
+                </ul>
             </div>
         </section>
 
