@@ -36,7 +36,10 @@ $prices = [3, 2, 2, 5, 8];
             <h2 class="exercice-ttl">Question 1</h2>
             <p class="exercice-txt">Ordonner le tableau des prix par ordre croissant et l'afficher en détail</p>
             <div class="exercice-sandbox">
-                
+            <?php
+                sort($prices);
+                var_dump($prices);
+            ?>
             </div>
         </section>
 
