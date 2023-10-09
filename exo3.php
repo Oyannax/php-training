@@ -148,7 +148,7 @@ $prices = [3, 2, 2, 5, 8];
             <?php
                 $newArticle = ["kiwi" => 1.5];
                 $store += $newArticle;
-                
+
                 var_dump($store);
             ?>
             </div>
@@ -166,7 +166,10 @@ $prices = [3, 2, 2, 5, 8];
             <h2 class="exercice-ttl">Question 9</h2>
             <p class="exercice-txt">Ajouter les nouveaux fruits du tableau $newFruits au tableau $store</p>
             <div class="exercice-sandbox">
-                
+            <?php
+                $store += $newFruits;
+                var_dump($store);
+            ?>
             </div>
         </section>
 
