@@ -121,7 +121,11 @@ $fruits = ["fraise", "banane", "pomme", "cerise", "abricot", "pêche", "ananas",
             <div class="exercice-sandbox">
                 <ul>
                 <?php
-                
+                    foreach ($fruits as $fruit) {
+                        if (mb_strlen($fruit) <= 5) {
+                            echo "<li>$fruit</li>";
+                        }
+                    }
                 ?>
                 </ul>
             </div>
