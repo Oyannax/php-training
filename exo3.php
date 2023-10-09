@@ -48,7 +48,15 @@ $prices = [3, 2, 2, 5, 8];
             <h2 class="exercice-ttl">Question 2</h2>
             <p class="exercice-txt">Ajouter 1 euro à chaque prix</p>
             <div class="exercice-sandbox">
-                
+            <?php
+                foreach ($prices as $price) {
+                    $price += 1;
+                    array_push($prices, $price);
+                    array_shift($prices);
+                }
+
+                var_dump($prices);
+            ?>
             </div>
         </section>
 
