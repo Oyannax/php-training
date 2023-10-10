@@ -168,7 +168,26 @@ $arrayB = [85, "toi", 95, "la", 65, 94, 85, "avec", 37, "chat"];
             <h2 class="exercice-ttl">Question 5</h2>
             <p class="exercice-txt">Déclarer une fonction qui prend en paramètre un tableau d'entiers ou de chaînes de caractères et retourne le tableau sans doublons</p>
             <div class="exercice-sandbox">
-                
+            <?php
+                /**
+                 * Returns a new array without duplicates
+                 *
+                 * @param array $array - The array
+                 * @return array - The new array
+                 */
+                function removeDuplicates(array $array): array {
+                    $newArray = [];
+                    foreach ($array as $value) {
+                        if (in_array($value, $newArray)) continue;
+                        $newArray[] = $value;
+                    }
+                    return $newArray;
+                }
+
+                var_dump(removeDuplicates($arrayA));
+
+                // var_dump(array_unique($arrayA));
+            ?>
             </div>
         </section>
 
