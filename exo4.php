@@ -132,11 +132,11 @@ $arrayB = [85, "toi", 95, "la", 65, 94, 85, "avec", 37, "chat"];
                  * @param array $array - The array
                  * @return array - The new array
                  */
-                function multiplyValueByTwo(array $array): array {
+                function multiplyValuesByTwo(array $array): array {
                     return array_map(fn($value) => $value * 2, $array);
                 }
 
-                echo turnArrayIntoString(multiplyValueByTwo($array));
+                echo turnArrayIntoString(multiplyValuesByTwo($array));
             ?>
             </div>
         </section>
@@ -146,7 +146,20 @@ $arrayB = [85, "toi", 95, "la", 65, 94, 85, "avec", 37, "chat"];
             <h2 class="exercice-ttl">Question 4 bis</h2>
             <p class="exercice-txt">Déclarer une fonction qui prend en paramètre un tableau d'entiers et un entier. La fonction doit retourner les valeurs du tableau divisées par le second paramètre</p>
             <div class="exercice-sandbox">
-                
+            <?php
+                /**
+                 * Divides an array's values by a given integer
+                 *
+                 * @param array $array - The array
+                 * @param integer $int - The integer
+                 * @return array - The new array
+                 */
+                function divideValuesByInt(array $array, int $int): array {
+                    return array_map(fn($value) => $value / $int, $array);
+                }
+
+                echo turnArrayIntoString(divideValuesByInt($array, 2));
+            ?>
             </div>
         </section>
 
