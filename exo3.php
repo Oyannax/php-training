@@ -178,7 +178,19 @@ $prices = [3, 2, 2, 5, 8];
             <h2 class="exercice-ttl">Question 10</h2>
             <p class="exercice-txt">Afficher le nom et le prix du fruit le moins cher</p>
             <div class="exercice-sandbox">
-                
+            <?php
+                $cheapestFruit = "";
+                $cheapestPrice = PHP_INT_MAX;
+
+                foreach ($store as $fruit => $price) {
+                    if ($price < $cheapestPrice) {
+                        $cheapestPrice = $price;
+                        $cheapestFruit = $fruit;
+                    }
+                }
+
+                echo "$cheapestFruit : $cheapestPrice";
+            ?>
             </div>
         </section>
 
