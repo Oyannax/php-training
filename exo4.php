@@ -38,7 +38,23 @@ $arrayB = [85, "toi", 95, "la", 65, 94, 85, "avec", 37, "chat"];
             <h2 class="exercice-ttl">Question 1</h2>
             <p class="exercice-txt">Déclarer une fonction qui prend en paramètre un tableau et retourne la chaîne de caractère HTML permettant d'afficher les valeurs du tableau sous la forme d'une liste.</p>
             <div class="exercice-sandbox">
+                <ul>
+                <?php
+                    /**
+                     * Turns an array into a list
+                     *
+                     * @param array $array - The array
+                     * @return string
+                     */
+                    function turnArrayIntoList(array $array): string {
+                        return implode(",</li><li>", $array);
+                    }
 
+                    $array1 = ['ketchup', 'pâtes', 'belvita', 'haricots', 'choux', 'jus de pomme'];
+
+                    echo '<li>'.turnArrayIntoList($array1).'</li>';
+                ?>
+                </ul>
             </div>
         </section>
 
