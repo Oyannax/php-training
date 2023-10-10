@@ -96,7 +96,27 @@ $arrayB = [85, "toi", 95, "la", 65, 94, 85, "avec", 37, "chat"];
             <h2 class="exercice-ttl">Question 3</h2>
             <p class="exercice-txt">Déclarer une fonction qui prend en paramètre un tableau d'entiers et retourne uniquement les entiers d'index pair</p>
             <div class="exercice-sandbox">
-                
+            <?php
+                /**
+                 * Creates an array with even index values
+                 *
+                 * @param array $array - The array
+                 * @return array - The new array
+                 */
+                function getEvenIndexValues(array $array): array {
+                    $evenIndexValues = [];
+                    foreach ($array as $index => $value) {
+                        if ($index % 2 === 0) {
+                            $evenIndexValues[] = $value;
+                        }
+                    }
+                    return $evenIndexValues;
+
+                    // return array_filter($array, fn($k) => !($k%2), ARRAY_FILTER_USE_KEY);
+                }
+
+                echo turnArrayIntoString(getEvenIndexValues($arrayA));
+            ?>
             </div>
         </section>
 
