@@ -199,7 +199,15 @@ $prices = [3, 2, 2, 5, 8];
             <h2 class="exercice-ttl">Question 11</h2>
             <p class="exercice-txt">Afficher les noms et le prix des fruits les plus chers</p>
             <div class="exercice-sandbox">
-                
+            <?php
+                $mostExpensive = [];
+
+                foreach ($store as $fruit => $price) {
+                    if ($price === max($store)) $mostExpensive[$fruit] = $price;
+                }
+
+                var_dump($mostExpensive);
+            ?>
             </div>
         </section>
     </div>
