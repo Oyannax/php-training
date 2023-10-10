@@ -39,6 +39,12 @@ $arrayB = [85, "toi", 95, "la", 65, 94, 85, "avec", 37, "chat"];
             <p class="exercice-txt">Déclarer une fonction qui prend en paramètre un tableau et retourne la chaîne de caractère HTML permettant d'afficher les valeurs du tableau sous la forme d'une liste.</p>
             <div class="exercice-sandbox">
             <?php
+                /**
+                 * Turns an array into a string
+                 *
+                 * @param array $array - The array
+                 * @return string - The string
+                 */
                 function turnArrayIntoString(array $array): string {
                     $list = '<ul>';
                     foreach ($array as $value) {
@@ -61,7 +67,27 @@ $arrayB = [85, "toi", 95, "la", 65, 94, 85, "avec", 37, "chat"];
             <h2 class="exercice-ttl">Question 2</h2>
             <p class="exercice-txt">Déclarer une fonction qui prend en paramètre un tableau d'entiers et retourne uniquement les valeurs paires. Afficher les valeurs du tableau sous la forme d'une liste HTML.</p>
             <div class="exercice-sandbox">
+            <?php
+                /**
+                 * Keeps even values from an array
+                 *
+                 * @param array $array - The array
+                 * @return array - The new array
+                 */
+                function getEvenArray(array $array): array {
+                    $evenArray = [];
+                    foreach ($array as $value) {
+                        if ($value % 2 === 0) {
+                            $evenArray[] = $value;
+                        }
+                    }
+                    return $evenArray;
 
+                    // return array_filter($array, fn($v) => is_numeric($v) && !($v % 2));
+                }
+
+                echo turnArrayIntoString(getEvenArray($array));
+            ?>
             </div>
         </section>
 
