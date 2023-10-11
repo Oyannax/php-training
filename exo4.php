@@ -196,7 +196,9 @@ $arrayB = [85, "toi", 95, "la", 65, 94, 85, "avec", 37, "chat"];
             <h2 class="exercice-ttl">Question 6</h2>
             <p class="exercice-txt">Déclarer une fonction qui prend en paramètre 2 tableaux et retourne un tableau représentant l'intersection des 2</p>
             <div class="exercice-sandbox">
-                
+            <?php
+                // function getCommonElements(array $array1, array $array2): array {}
+            ?>
             </div>
         </section>
 
@@ -205,7 +207,28 @@ $arrayB = [85, "toi", 95, "la", 65, 94, 85, "avec", 37, "chat"];
             <h2 class="exercice-ttl">Question 7</h2>
             <p class="exercice-txt">Déclarer une fonction qui prend en paramètre 2 tableaux et retourne un tableau des valeurs du premier tableau qui ne sont pas dans le second</p>
             <div class="exercice-sandbox">
-                
+            <?php
+                /**
+                 * Returns a new array with array1 values that aren't in array2
+                 *
+                 * @param array $array1 - Array1
+                 * @param array $array2 - Array2
+                 * @return array - The new array
+                 */
+                function getDiffFromArrays(array $array1, array $array2): array {
+                    $diffArray = [];
+                    foreach ($array1 as $value) {
+                        if (!in_array($value, $array2)) {
+                            $diffArray[] = $value;
+                        }
+                    }
+                    return $diffArray;
+                }
+
+                echo turnArrayIntoString(getDiffFromArrays($array, $arrayA));
+
+                // echo turnArrayIntoString(array_diff($array, $arrayA));
+            ?>
             </div>
         </section>
 
