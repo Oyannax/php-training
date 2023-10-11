@@ -1,0 +1,29 @@
+.wrapper {
+    padding: 0 !important;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+.wrapper li {
+    text-align: center;
+    list-style: none;
+}
+.wrapper li h3 {
+    padding-bottom: 0.5rem;
+    text-align: center;
+}
+.wrapper li img {
+    max-width: 100%;
+}
+
+@media screen and (min-width: 480px) {
+    .wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .wrapper {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

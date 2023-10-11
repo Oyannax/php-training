@@ -1,5 +1,7 @@
 <?php
 
+require 'includes/_functions.php';
+
 // Json file
 try {
     $fileContent = file_get_contents("datas/series.json");
@@ -49,7 +51,18 @@ try {
             <h2 class="exercice-ttl">Question 1</h2>
             <p class="exercice-txt">Récupérer dans un tableau puis afficher l'ensemble des plateformes de diffusion des séries. Afficher les par ordre alphabétique.</p>
             <div class="exercice-sandbox">
-                
+            <?php
+                function getSeriesInfo(array $series, string $info): array {
+                    $seriesInfo = [];
+                    foreach ($series as $serie) {
+                        $seriesInfo[] = $serie[$info];
+                    }
+                    sort($seriesInfo);
+                    return $seriesInfo;
+                }
+
+                var_dump(removeDuplicates(getSeriesInfo($series, 'availableOn')));
+            ?>
             </div>
         </section>
 
@@ -59,7 +72,17 @@ try {
             <p class="exercice-txt">Afficher la liste de toutes les séries avec l'image principale et son titre</p>
             <p class="exercice-txt">Afficher une seule série par ligne sur les plus petits écrans, 2 séries par ligne sur les écrans intermédiaires et 4 séries par ligne sur un écran d'ordinateur.</p>
             <div class="exercice-sandbox">
+            <?php
+                function turnArrIntoList(array $series, string $info1, string $info2): string {
+                    $list = '<ul class="wrapper">';
+                    foreach ($series as $serie) {
+                        $list .= '<li><h3>'.$serie[$info1].'</h3><img src='.$serie[$info2].'></li>';
+                    }
+                    return $list .= '</ul>';
+                }
 
+                echo turnArrIntoList($series, 'name', 'image');
+            ?>
             </div>
         </section>
 
