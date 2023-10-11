@@ -223,6 +223,8 @@ $arrayB = [85, "toi", 95, "la", 65, 94, 85, "avec", 37, "chat"];
                         }
                     }
                     return $diffArray;
+
+                    // return array_filter($array1, fn($v) => !in_array($v, $array2));
                 }
 
                 echo turnArrayIntoString(getDiffFromArrays($array, $arrayA));
