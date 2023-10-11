@@ -267,7 +267,20 @@ $arrayB = [85, "toi", 95, "la", 65, 94, 85, "avec", 37, "chat"];
             <h2 class="exercice-ttl">Question 9</h2>
             <p class="exercice-txt">Déclarer une fonction qui prend en paramètre un tableau et un entier et retourne les n premiers éléments du tableau.</p>
             <div class="exercice-sandbox">
-                
+            <?php
+                function extractNFirstValues(array $array, int $n): array {
+                    $newArray = [];
+                    $n = min($n, sizeof($array));
+                    while ($n > sizeof($newArray)) {
+                        $newArray[] = array_shift($array);
+                    }
+                    return $newArray;
+
+                    // return array_filter($array, fn($k) => $k <= $n - 1, ARRAY_FILTER_USE_KEY);
+                }
+
+                var_dump(extractNFirstValues($array, 3));
+            ?>
             </div>
         </section>
     </div>
