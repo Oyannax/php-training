@@ -213,15 +213,28 @@ $arrayB = [85, "toi", 95, "la", 65, 94, 85, "avec", 37, "chat"];
                  *
                  * @param array $array1 - Array1
                  * @param array $array2 - Array2
+                 * @param bool $unique - Facultative parameter: when set to true, deduplicates the resulted array
                  * @return array - The new array
                  */
-                function getDiffFromArrays(array $array1, array $array2): array {
+                function getDiffFromArrays(array $array1, array $array2, bool $unique = false): array {
                     $diffArray = [];
                     foreach ($array1 as $value) {
                         if (!in_array($value, $array2)) {
                             $diffArray[] = $value;
                         }
                     }
+                    if ($unique) {
+                        return removeDuplicates($diffArray);
+                    }
+
+                    // foreach ($array1 as $value) {
+                    //     if (
+                    //         !in_array($value, $array2) && (!$unique || ($unique && !in_array($value, $diffArray)))
+                    //     ) {
+                    //         $diffArray[] = $value;
+                    //     }
+                    // }
+
                     return $diffArray;
 
                     // return array_filter($array1, fn($v) => !in_array($v, $array2));
@@ -240,7 +253,11 @@ $arrayB = [85, "toi", 95, "la", 65, 94, 85, "avec", 37, "chat"];
             <h2 class="exercice-ttl">Question 8</h2>
             <p class="exercice-txt">Réécrire la fonction précédente pour lui ajouter un paramètre booléen facultatif. Si celui-ci est à true, le tableau retourné sera sans doublons</p>
             <div class="exercice-sandbox">
-                
+            <?php
+                echo turnArrayIntoString(getDiffFromArrays($arrayA, $arrayB, true));
+                echo '<br>';
+                echo turnArrayIntoString(getDiffFromArrays($arrayA, $arrayB));
+            ?>
             </div>
         </section>
 
