@@ -268,6 +268,13 @@ $arrayB = [85, "toi", 95, "la", 65, 94, 85, "avec", 37, "chat"];
             <p class="exercice-txt">Déclarer une fonction qui prend en paramètre un tableau et un entier et retourne les n premiers éléments du tableau.</p>
             <div class="exercice-sandbox">
             <?php
+                /**
+                 * Extracts from an array the number of values given with n
+                 *
+                 * @param array $array - The array
+                 * @param integer $n - N
+                 * @return array - The new array
+                 */
                 function extractNFirstValues(array $array, int $n): array {
                     $newArray = [];
                     $n = min($n, sizeof($array));
