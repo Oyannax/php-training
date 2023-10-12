@@ -1,8 +1,9 @@
 <?php
+require 'includes/_header.php';
 
 $fruits = ["fraise", "banane", "pomme", "cerise", "abricot", "pêche", "ananas", "kiwi"];
-
 ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -16,7 +17,7 @@ $fruits = ["fraise", "banane", "pomme", "cerise", "abricot", "pêche", "ananas",
 
 <body class="dark-template">
     <div class="container">
-        <header class="header">
+        <!-- <header class="header">
             <h1 class="main-ttl">Introduction PHP - Exo 2</h1>
             <nav class="main-nav">
                 <ul class="main-nav-list">
@@ -28,7 +29,11 @@ $fruits = ["fraise", "banane", "pomme", "cerise", "abricot", "pêche", "ananas",
                     <li><a href="exo6.php" class="main-nav-link">Mini-site</a></li>
                 </ul>
             </nav>
-        </header>
+        </header> -->
+        <?php
+            echo turnArrIntoHeader($pages, $pages[1]);
+        ?>
+
         <!-- QUESTION 1 -->
         <section class="exercice">
             <h2 class="exercice-ttl">Question 1</h2>
@@ -183,7 +188,10 @@ $fruits = ["fraise", "banane", "pomme", "cerise", "abricot", "pêche", "ananas",
             </div>
         </section>
     </div>
-    <div class="copyright">© Guillaume Belleuvre, 2023 - DWWM</div>
+    <!-- <div class="copyright">© Guillaume Belleuvre, 2023 - DWWM</div> -->
+    <?php
+        echo $footer;
+    ?>
 </body>
 
 </html>

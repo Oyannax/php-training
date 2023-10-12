@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Returns a new array without duplicates
  *

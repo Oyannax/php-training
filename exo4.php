@@ -1,11 +1,12 @@
 <?php
+require 'includes/_header.php';
 
 $array = [12, 65, 95, 41, 85, 63, 71, 64];
 
 $arrayA = [12, "le", 95, 12, 85, "le", 71, "toi", 95, "la"];
 $arrayB = [85, "toi", 95, "la", 65, 94, 85, "avec", 37, "chat"];
-
 ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -19,7 +20,7 @@ $arrayB = [85, "toi", 95, "la", 65, 94, 85, "avec", 37, "chat"];
 
 <body class="dark-template">
     <div class="container">
-        <header class="header">
+        <!-- <header class="header">
             <h1 class="main-ttl">Introduction PHP - Exo 4</h1>
             <nav class="main-nav">
                 <ul class="main-nav-list">
@@ -31,7 +32,10 @@ $arrayB = [85, "toi", 95, "la", 65, 94, 85, "avec", 37, "chat"];
                     <li><a href="exo6.php" class="main-nav-link">Mini-site</a></li>
                 </ul>
             </nav>
-        </header>
+        </header> -->
+        <?php
+            echo turnArrIntoHeader($pages, $pages[3]);
+        ?>
 
         <!-- QUESTION 1 -->
         <section class="exercice">
@@ -291,7 +295,10 @@ $arrayB = [85, "toi", 95, "la", 65, 94, 85, "avec", 37, "chat"];
             </div>
         </section>
     </div>
-    <div class="copyright">© Guillaume Belleuvre, 2023 - DWWM</div>
+    <!-- <div class="copyright">© Guillaume Belleuvre, 2023 - DWWM</div> -->
+    <?php
+        echo $footer;
+    ?>
 </body>
 
 </html>

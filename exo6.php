@@ -1,3 +1,7 @@
+<?php
+require 'includes/_header.php';
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -11,7 +15,7 @@
 
 <body class="dark-template">
     <div class="container">
-        <header class="header">
+        <!-- <header class="header">
             <h1 class="main-ttl">Introduction PHP - Exo 6</h1>
             <nav class="main-nav">
                 <ul class="main-nav-list">
@@ -23,7 +27,10 @@
                     <li><a href="exo6.php" class="main-nav-link active">Mini-site</a></li>
                 </ul>
             </nav>
-        </header>
+        </header> -->
+        <?php
+            echo turnArrIntoHeader($pages, $pages[5]);
+        ?>
 
         <section class="exercice">
             Les questions suivantes ont pour vocation a faire évoluer et à généraliser la structure du code de ce mini-site d'exercice.
@@ -35,7 +42,9 @@
             <p class="exercice-txt">Créez un tableau listant toutes les pages du site et contenant toutes les données qui leurs sont associées.</p>
             <p class="exercice-txt">Afficher l'intégralité du tableau sur la page.</p>
             <div class="exercice-sandbox">
-
+            <?php
+                var_dump($pages);
+            ?>
             </div>
         </section>
 
@@ -45,7 +54,19 @@
             <p class="exercice-txt">Implémenter une fonction qui génére le code HTML du menu de navigation du site.</p>
             <p class="exercice-txt">Utiliser cette fonction pour afficher le menu sur l'ensemble des pages du site.</p>
             <div class="exercice-sandbox">
-
+            <?php
+                // function turnArrIntoNav(array $pages, array $activePage): string {
+                //     $nav = '<header class="header"><h1 class="main-ttl">Introduction PHP - '.$activePage["title"].'</h1><nav class="main-nav"><ul class="main-nav-list">';
+                //     foreach ($pages as $page) {
+                //         $nav .= '<li><a href='.$page["link"].' class="main-nav-link';
+                //         if ($page === $activePage) {
+                //             $nav .= ' active';
+                //         }
+                //         $nav .= '">'.$page["name"].'</a></li>';
+                //     }
+                //     return $nav .= '</ul></nav></header>';
+                // }
+            ?>
             </div>
         </section>
 
@@ -68,7 +89,10 @@
             </div>
         </section>
     </div>
-    <div class="copyright">© Guillaume Belleuvre, 2023 - DWWM</div>
+    <!-- <div class="copyright">© Guillaume Belleuvre, 2023 - DWWM</div> -->
+    <?php
+        echo $footer;
+    ?>
 </body>
 
 </html>

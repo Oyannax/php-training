@@ -1,5 +1,5 @@
 <?php
-
+require 'includes/_header.php';
 require 'includes/_functions.php';
 
 // Json file
@@ -10,7 +10,6 @@ try {
     echo "Something went wrong with json file...";
     exit;
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -27,7 +26,7 @@ try {
 
 <body class="dark-template">
     <div class="container">
-        <header class="header">
+        <!-- <header class="header">
             <h1 class="main-ttl">Introduction PHP - Exo 5</h1>
             <nav class="main-nav">
                 <ul class="main-nav-list">
@@ -39,7 +38,10 @@ try {
                     <li><a href="exo6.php" class="main-nav-link">Mini-site</a></li>
                 </ul>
             </nav>
-        </header>
+        </header> -->
+        <?php
+            echo turnArrIntoHeader($pages, $pages[4]);
+        ?>
 
         <section class="exercice">
             Sur cette page un fichier comportant les données de séries télé est importé côté serveur. (voir datas/series.json)
@@ -143,7 +145,10 @@ try {
         </section>
 
     </div>
-    <div class="copyright">© Guillaume Belleuvre, 2023 - DWWM</div>
+    <!-- <div class="copyright">© Guillaume Belleuvre, 2023 - DWWM</div> -->
+    <?php
+        echo $footer;
+    ?>
 </body>
 
 </html>
